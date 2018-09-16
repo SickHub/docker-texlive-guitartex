@@ -13,8 +13,6 @@ RUN wget https://netcologne.dl.sourceforge.net/project/guitartex/GuitarTeX/Guita
     (cd guitartex-2.8.2; ./install.sh) && \
     rm -rf guitartex-2.8.2*
 
-ENV HOME=/data
-
 # mount your .gtx files here, including .guitartexrc
 VOLUME ["/data"]
 
