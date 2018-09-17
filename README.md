@@ -1,3 +1,5 @@
+[![DockerHub build status](https://img.shields.io/docker/build/drpsychick/texlive-guitartex.svg)](https://img.shields.io/docker/build/drpsychick/texlive-guitartex.svg) [![DockerHub build](https://img.shields.io/docker/automated/drpsychick/texlive-guitartex.svg)](https://img.shields.io/docker/automated/drpsychick/texlive-guitartex.svg)
+
 # docker-texlive-guitartex 
 Minimal texlive alpine image including guitartex (gtx2tex)
 
