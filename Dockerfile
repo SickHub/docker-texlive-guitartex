@@ -11,6 +11,7 @@ RUN wget https://netcologne.dl.sourceforge.net/project/guitartex/GuitarTeX/Guita
     sed -i -e 's#/bin/bash#/bin/sh#' guitartex-2.8.2/install.sh && \
     sed -i -e 's/latin1/utf8/' guitartex-2.8.2/gtx2tex.pl && \
     (cd guitartex-2.8.2; ./install.sh) && \
+    cp guitartex-2.8.2/guitartex.conf / && \
     rm -rf guitartex-2.8.2*
 
 # mount your .gtx files here, including .guitartexrc

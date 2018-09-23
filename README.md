@@ -8,8 +8,13 @@ Minimal texlive alpine image including guitartex (gtx2tex)
 * based on https://github.com/phipsgabler/docker-texlive-minimal
 * adds guitartex https://sourceforge.net/projects/guitartex/
 
+## Create default .guitartexrc
+if you don't have one:
+
+`docker run -it --rm -v $PWD:/data drpsychick/texlive-guitartex cp /guitartex.conf /data/.guitartexrc`
+
 ## Convert gtx to pdf
-docker run -it --rm -v $PWD:/data drpsychick/texlive-guitartex gtx2tex --output=pdf /data/mysong.gtx
+`docker run -it --rm -v $PWD:/data drpsychick/texlive-guitartex gtx2tex --output=pdf /data/mysong.gtx`
 
 ## Issues
 * [ ] thumbpdf throws errors with Ghostscript
