@@ -3,9 +3,6 @@ FROM drpsychick/texlive-pdflatex:$ALPINE_VERSION
 
 ENV PATH=/usr/local/texlive/bin/x86_64-linux:/usr/local/texlive/bin/x86_64-linuxmusl:$PATH
 
-RUN tlmgr update --self && \
-    tlmgr install collection-latex collection-fontsrecommended thumbpdf
-
 RUN wget https://netcologne.dl.sourceforge.net/project/guitartex/GuitarTeX/GuitarTeX-2.8.2/guitartex-2.8.2-fix1.tar.gz && \
     tar xzf guitartex-2.8.2-fix1.tar.gz && \
     # fix shell and input encoding = utf8
