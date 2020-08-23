@@ -1,6 +1,7 @@
-FROM phipsgabler/texlive-minimal
+ARG ALPINE_VERSION=latest
+FROM drpsychick/texlive-pdflatex:$ALPINE_VERSION
 
-ENV PATH=/usr/local/texlive/bin/x86_64-linuxmusl:$PATH
+ENV PATH=/usr/local/texlive/bin/x86_64-linux:/usr/local/texlive/bin/x86_64-linuxmusl:$PATH
 
 RUN tlmgr update --self && \
     tlmgr install collection-latex collection-fontsrecommended thumbpdf
