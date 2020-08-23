@@ -1,6 +1,10 @@
 # [Docker image: texlive-guitartex](https://hub.docker.com/r/drpsychick/texlive-guitartex/)
 
-[![DockerHub build status](https://img.shields.io/docker/build/drpsychick/texlive-guitartex.svg)](https://hub.docker.com/r/drpsychick/texlive-guitartex/builds/) [![DockerHub build](https://img.shields.io/docker/automated/drpsychick/texlive-guitartex.svg)](https://hub.docker.com/r/drpsychick/texlive-guitartex/)
+[![Docker image](https://img.shields.io/docker/image-size/drpsychick/texlive-guitartex?sort=date)](https://hub.docker.com/r/drpsychick/texlive-guitartex/tags)
+[![Travis CI](https://img.shields.io/travis/com/DrPsychick/docker-texlive-guitartex)](https://travis-ci.com/github/DrPsychick/docker-texlive-guitartex)
+[![DockerHub pulls](https://img.shields.io/docker/pulls/drpsychick/texlive-guitartex.svg)](https://hub.docker.com/r/drpsychick/texlive-guitartex/)
+[![DockerHub stars](https://img.shields.io/docker/stars/drpsychick/texlive-guitartex.svg)](https://hub.docker.com/r/drpsychick/texlive-guitartex/)
+[![GitHub stars](https://img.shields.io/github/stars/drpsychick/docker-texlive-guitartex.svg)](https://github.com/drpsychick/docker-texlive-guitartex)
 
 Minimal texlive alpine image including guitartex (gtx2tex)
 
