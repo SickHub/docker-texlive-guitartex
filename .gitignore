@@ -1,0 +1,4 @@
+example/*.log
+example/*.tex
+example/*.tpt
+example/*.aux

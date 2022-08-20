@@ -9,10 +9,17 @@ RUN wget https://netcologne.dl.sourceforge.net/project/guitartex/GuitarTeX/Guita
     sed -i -e 's#/bin/bash#/bin/sh#' guitartex-2.8.2/install.sh && \
     sed -i -e 's/latin1/utf8/' guitartex-2.8.2/gtx2tex.pl && \
     (cd guitartex-2.8.2; ./install.sh) && \
-    cp guitartex-2.8.2/guitartex.conf / && \
-    rm -rf guitartex-2.8.2*
+    mkdir -p /root/texmf/tex/latex/local/ && \
+    cp -r guitartex-2.8.2/.TeX/gchords.sty /root/texmf/tex/latex/local/ && \
+    chmod go+r /root/texmf/tex/latex/local/* && \
+    cp guitartex-2.8.2/guitartex.conf /root/.guitartexrc && \
+    rm -rf guitartex-2.8.2* && \
+    texhash
+
+RUN sed -i -e "s#thumbpdf \$outfilename#sh -c 'thumbpdf \$outfilename'#" /usr/local/bin/gtx2tex
 
 # mount your .gtx files here, including .guitartexrc
 VOLUME ["/data"]
+WORKDIR /data
 
 CMD ["gtx2tex"]

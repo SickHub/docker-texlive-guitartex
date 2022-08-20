@@ -1,0 +1,95 @@
+#-----------------------------------------------------------------------------------
+# Languages
+#-----------------------------------------------------------------------------------
+# supported Languages:
+# define hash with supported languages
+$languages{"en"} = "english";
+$languages{"de"} = "german";
+$languages{"it"} = "italian";
+$languages{"br"} = "brazilian";
+$languages{"pl"} = "polish";
+$languages{"es"} = "spanish";
+
+$language="en";
+
+
+#-----------------------------------------------------------------------------------
+# Tool tips
+#-----------------------------------------------------------------------------------
+# GuitarTeX shows tool tips if the mouse cursor stays over an icon
+# for a short time
+$tool_tips = "yes";
+
+
+#-----------------------------------------------------------------------------------
+# Syntax highlighting
+#-----------------------------------------------------------------------------------
+# turn on or off syntax highlighting
+# supported values: 'yes' turns highlighting on, any other value turns highlighting off
+
+$highlight = "yes";
+
+# highlighting colors
+# colors may be given as rgb values in hex (e.g. #ffffff for white) or by name (e.g. black)
+# a list of all supported color names can be found in the color dialog box (see color menu)
+
+# highlighting colors for directives
+$highlight_directive_foreground = "red";
+$highlight_directive_background = "#ffe0e0";
+# highlighting colors for chords
+$highlight_chord_foreground = "midnightblue";
+$highlight_chord_background = "#e0e0ff";
+# highlighting colors for comments
+$highlight_comment_foreground = "white";
+$highlight_comment_background = "lightgrey";
+
+#-----------------------------------------------------------------------------------
+# default values for printed output
+#-----------------------------------------------------------------------------------
+
+#font size, supported values: 10, 11, 12
+$font_size = "11";
+
+#default colors
+#colors are comma separated decimal values from 0 to 1 (e.g. 1,1,1 for white)
+
+#default color for chorus
+$color_chorus = "1,0,0";
+#default color for bridge
+$color_bridge = "0,0,1";
+#default color for instrumental part
+$color_instr = ".3,.3,.3";
+#default color for ascii tablature
+$color_tab = ".3,.3,.3";
+#default foreground and background color for second voice
+$color_second = "1,1,1";
+$color_second_back = ".7,.7,.7";
+
+#-----------------------------------------------------------------------------------
+# text viewer
+#-----------------------------------------------------------------------------------
+# after creating a latex file, you can view/edit it with the program specified here
+# add your favourite editor here
+#
+# $text_viewer = "kwrite";
+# $text_viewer = "emacs";
+$text_viewer = "kate";
+
+#-----------------------------------------------------------------------------------
+# postscript viewer
+#-----------------------------------------------------------------------------------
+# after creating a postscript file, you can view it with the viewer specified here
+#
+# $ps_viewer = "gv";
+$ps_viewer = "kghostview";
+
+#-----------------------------------------------------------------------------------
+# pdf viewer
+#-----------------------------------------------------------------------------------
+# after creating a pdf file, you can view it with the viewer specified here
+#
+# $pdf_viewer = "gv";
+# $pdf_viewer = "acroread";
+$pdf_viewer = "kghostview";
+
+1; # this must be the last line !
