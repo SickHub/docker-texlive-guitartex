@@ -18,7 +18,7 @@ RUN wget https://netcologne.dl.sourceforge.net/project/guitartex/GuitarTeX/Guita
     rm -rf guitartex-2.8.2* && \
     texhash
 
-#RUN sed -i -e 's#thumbpdf $outfilename#thumbpdf $outfilename.pdf#' /usr/local/bin/gtx2tex
+RUN sed -i -e "s#thumbpdf \$outfilename#sh -c 'thumbpdf \$outfilename'#" /usr/local/bin/gtx2tex
 
 # mount your .gtx files here, including .guitartexrc
 VOLUME ["/data"]
