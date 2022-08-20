@@ -44,6 +44,7 @@ script:
   - >
     echo "Running tests...";
     docker run $IMAGE pdflatex -version
+  - docker run --rm -v $PWD/example:/data $IMAGE gtx2tex --output=pdf Eagles_-_Hotel_California.gtx
 
 after_success:
   - bash deploy.sh
